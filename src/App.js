@@ -1,11 +1,29 @@
 import logo from './logo.svg';
 import './App.css';
-import {AddTodo} from './todos/AddTodo';
-import {TodoList} from "./todos/TodoList";
-import {Footer} from "./todos/Footer";
+// import {AddTodo} from './todos/AddTodo';
+// import {TodoList} from "./todos/TodoList";
+// import {Footer} from "./todos/Footer";
 import {Component} from "react";
+import {AddTodoContainer} from "./containers/AddTodoContainer";
+import {TodoListContainer} from "./containers/TodoListContainer";
+import {FooterContainer} from "./containers/FooterContainer";
 
 
+class App extends Component {
+
+  render () {
+    return (
+      <div className="App">
+        <AddTodoContainer />
+        <TodoListContainer />
+        <FooterContainer />
+      </div>
+    );
+  }
+
+}
+
+/*
 class App extends Component {
 
   constructor(props) {
@@ -31,10 +49,10 @@ class App extends Component {
     );
   }
 
-  /**
+  /!**
    * define method to get todo list after setting filter
    * @returns {T[]}
-   */
+   *!/
   getVisibleTodos = () => {
     const currentFilter = this.state.filter;
     return this.state.todos.filter(item => {
@@ -50,10 +68,10 @@ class App extends Component {
     })
   }
 
-  /**
+  /!**
    * add the input value on list
    * @param text
-   */
+   *!/
   addTodo = (text) => {
     const todo = {
       id: this.nextTodoId++,
@@ -67,10 +85,10 @@ class App extends Component {
     });
   }
 
-  /**
+  /!**
    * switch the item between completed and active
    * @param id
-   */
+   *!/
   toggleTodo = (id) => {
     const newTodos = this.state.todos.map(item => {
       return item.id === id ? {...item, completed: !item.completed} : item;
@@ -81,16 +99,16 @@ class App extends Component {
     })
   }
 
-  /**
+  /!**
    * set the filter to show the respective list
    * @param filter
-   */
+   *!/
   setVisibilityFilter = filter => {
     this.setState({
       filter
     })
   }
-}
+}*/
 
 export default App;
 

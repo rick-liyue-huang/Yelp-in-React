@@ -2,9 +2,6 @@ import React, {Component} from 'react';
 import {Todo} from "./Todo";
 
 export class TodoList extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     const {todos, toggleTodo} = this.props
@@ -18,7 +15,6 @@ export class TodoList extends Component {
             />
           })
         }
-        <li></li>
       </ul>
     )
   }
