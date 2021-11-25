@@ -1,4 +1,4 @@
-import {Footer} from "../todos/Footer";
+import {Footer} from "../components/Footer";
 import {connect} from "react-redux";
 import {setFilterAction} from "../actions";
 import {getFilter} from "../selectors";

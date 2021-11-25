@@ -1,4 +1,4 @@
-import {AddTodo} from "../todos/AddTodo";
+import {AddTodo} from "../components/AddTodo";
 import {connect} from 'react-redux';
 import {addTodoAction, clearInputTextAction, setTodoTextAction} from "../actions";
 import {getText} from "../selectors";

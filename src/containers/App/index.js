@@ -1,12 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
+// import logo from '../../logo.svg';
+import './style.css';
 // import {AddTodo} from './todos/AddTodo';
 // import {TodoList} from "./todos/TodoList";
 // import {Footer} from "./todos/Footer";
 import {Component} from "react";
-import {AddTodoContainer} from "./containers/AddTodoContainer";
-import {TodoListContainer} from "./containers/TodoListContainer";
-import {FooterContainer} from "./containers/FooterContainer";
+// import {AddTodoContainer} from "../../todos/containers/AddTodoContainer";
+// import {TodoListContainer} from "../../todos/containers/TodoListContainer";
+// import {FooterContainer} from "../../todos/containers/FooterContainer";
 
 
 class App extends Component {
@@ -14,9 +14,7 @@ class App extends Component {
   render () {
     return (
       <div className="App">
-        <AddTodoContainer />
-        <TodoListContainer />
-        <FooterContainer />
+        todo
       </div>
     );
   }

@@ -1,9 +1,6 @@
 import React, {Component} from 'react';
 
 export class Todo extends Component {
-  constructor(props) {
-    super(props);
-  }
 
   render() {
     const {text, completed, onClick} = this.props;

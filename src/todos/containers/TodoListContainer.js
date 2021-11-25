@@ -1,6 +1,6 @@
 
 import {connect} from 'react-redux';
-import {TodoList} from "../todos/TodoList";
+import {TodoList} from "../components/TodoList";
 import {fetchTodosAction, toggleTodoAction} from "../actions";
 import {getVisibleTodos} from "../selectors";
 import {toJS} from '../HOCs/toJS'

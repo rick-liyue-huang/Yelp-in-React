@@ -1,8 +1,8 @@
 
 
-import {todoApp} from "./reducers";
+import {todoApp} from "./todos/reducers";
 import {createStore} from "redux";
-import {addTodoAction, setFilterAction, setTodoTextAction, toggleTodoAction} from "./actions";
+import {addTodoAction, setFilterAction, setTodoTextAction, toggleTodoAction} from "./todos/actions";
 
 const store  = createStore(todoApp);
 

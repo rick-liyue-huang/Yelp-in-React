@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from './containers/App';
 import reportWebVitals from './reportWebVitals';
 import {applyMiddleware, compose, createStore} from 'redux';
 import {Provider} from 'react-redux';
-import {todoApp} from "./reducers";
+import {todoApp} from "./todos/reducers";
 import thunkMiddleware from 'redux-thunk';
-import loggerMiddleware from './middlewares/logger';
-import loggerEnhancer from './enhancers/logger';
+import loggerMiddleware from './todos/middlewares/logger';
+import loggerEnhancer from './todos/enhancers/logger';
 
 
 
@@ -19,11 +19,9 @@ applyMiddleware(thunkMiddleware, loggerMiddleware), loggerEnhancer
 
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
-  </React.StrictMode>,
+  <Provider store={store}>
+    <App />
+  </Provider>,
   document.getElementById('root')
 );
 

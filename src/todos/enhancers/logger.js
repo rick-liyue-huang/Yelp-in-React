@@ -1,5 +1,3 @@
-import {createStore} from "redux";
-
 
 const logger = createStore => (...args) => {
   const store = createStore(...args);

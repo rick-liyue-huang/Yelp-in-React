@@ -5,7 +5,7 @@ import {
   FETCH_TODOS_SUCCESS,
   TOGGLE_TODO
 } from "../actions/actionTypes";
-import Immutable, {fromJS} from "immutable";
+import {fromJS} from "immutable";
 
 
 

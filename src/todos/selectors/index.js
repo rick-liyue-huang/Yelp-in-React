@@ -1,4 +1,4 @@
-import {createSelector} from "reselect";
+// import {createSelector} from "reselect";
 
 /*
 export const getText = (state) => state.text;
