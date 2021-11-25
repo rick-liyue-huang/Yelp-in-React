@@ -1,4 +1,7 @@
-/*export const getText = (state) => state.text;
+import {createSelector} from "reselect";
+
+/*
+export const getText = (state) => state.text;
 export const getFilter  = (state) => state.filter;
 
 export const getVisibleTodos = (state)=> {
@@ -13,9 +16,11 @@ export const getVisibleTodos = (state)=> {
     default:
       return new Error('unknown filter: ' + filter)
   }
-}*/
+}
+*/
 
 // state has been act as immutable object
+
 export const getText = (state) => state.get('text');
 export const getFilter  = (state) => state.get('filter');
 
@@ -35,4 +40,30 @@ export const getVisibleTodos = (state)=> {
       return new Error('unknown filter: ' + filter)
   }
 }
+
+
+/*
+
+export const getText = (state) => state.text;
+export const getFilter  = (state) => state.filter;
+const getTodos = state => state.todos.data;
+
+export const getVisibleTodos = createSelector(
+  [getTodos, getFilter],
+  (todos, filter) => {
+    switch (filter) {
+      case 'all':
+        return todos;
+      case 'active':
+        return todos.filter(todo => !todo.completed);
+      case 'completed':
+        return todos.filter(todo => todo.completed);
+      default:
+        return new Error('unknown filter: ' + filter)
+    }
+  }
+)
+*/
+
+
 
