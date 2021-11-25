@@ -1,0 +1,12 @@
+[
+  {
+    "id": 100,
+    "text": "Learn React",
+    "completed": true
+  },
+  {
+    "id": 101,
+    "text": "Learn Angular",
+    "completed": false
+  }
+]

@@ -1,8 +1,11 @@
 
 import {connect} from 'react-redux';
 import {TodoList} from "../todos/TodoList";
-import {toggleTodoAction} from "../actions";
+import {fetchTodosAction, toggleTodoAction} from "../actions";
+import {getVisibleTodos} from "../selectors";
+import {toJS} from '../HOCs/toJS'
 
+/*
 const getVisibleTodos = (todos, filter)=> {
   switch (filter) {
     case 'all':
@@ -15,15 +18,20 @@ const getVisibleTodos = (todos, filter)=> {
       return new Error('unknown filter: ' + filter)
   }
 }
+*/
 
 const mapStateToProps = (state) => {
   return {
-    todos: getVisibleTodos(state.todos, state.filter),
+    // todos: getVisibleTodos(state.todos.data, state.filter),
+    todos: getVisibleTodos(state),
+    // todos: getVisibleTodos(state).toJS() // transfer to plain js object
   }
 }
 
 const mapDispatchToProps= (dispatch) => ({
-  toggleTodo: id => dispatch(toggleTodoAction(id))
+  toggleTodo: id => dispatch(toggleTodoAction(id)),
+  fetchTodos: () => dispatch(fetchTodosAction())
 })
 
-export const TodoListContainer = connect(mapStateToProps, mapDispatchToProps)(TodoList)
+// export const TodoListContainer = connect(mapStateToProps, mapDispatchToProps)(TodoList)
+export const TodoListContainer = connect(mapStateToProps, mapDispatchToProps)(toJS(TodoList))

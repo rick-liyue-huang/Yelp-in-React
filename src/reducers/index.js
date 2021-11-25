@@ -1,9 +1,11 @@
 
 // import {ADD_TODO, SET_FILTER, SET_TODO_TEXT, TOGGLE_TODO} from "../actions/actionTypes";
-import {combineReducers} from "redux";
-import {todos} from "./todos";
+// import {combineReducers} from "redux";
+import {combineReducers} from 'redux-immutable';
+import todos from "./todos";
 import {text} from "./text";
 import {filter} from "./filter";
+
 
 /*const initialState = {
   filter: 'all',
