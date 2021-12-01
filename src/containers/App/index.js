@@ -8,13 +8,15 @@ import {Component} from "react";
 // import {TodoListContainer} from "../../todos/containers/TodoListContainer";
 // import {FooterContainer} from "../../todos/containers/FooterContainer";
 
+import Blog from '../../blog';
+
 
 class App extends Component {
 
   render () {
     return (
       <div className="App">
-        todo
+        <Blog />
       </div>
     );
   }

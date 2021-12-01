@@ -1,0 +1,19 @@
+import React from 'react';
+
+const Header = ({title}) => {
+
+  return (
+    <header style={{
+      backgroundColor: 'royalblue',
+      color: '#fff'
+    }}>
+      <h1>{title}</h1>
+    </header>
+  );
+};
+
+Header.defaultProps = {
+  title: 'Default Title',
+}
+
+export default Header;

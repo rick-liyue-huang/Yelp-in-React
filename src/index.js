@@ -3,19 +3,21 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './containers/App';
 import reportWebVitals from './reportWebVitals';
-import {applyMiddleware, compose, createStore} from 'redux';
 import {Provider} from 'react-redux';
+import store from "./redux/store";
+
+/*
+import {applyMiddleware, compose, createStore} from 'redux';
 import {todoApp} from "./todos/reducers";
 import thunkMiddleware from 'redux-thunk';
 import loggerMiddleware from './todos/middlewares/logger';
 import loggerEnhancer from './todos/enhancers/logger';
 
-
-
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(todoApp,  composeEnhancers(
 applyMiddleware(thunkMiddleware, loggerMiddleware), loggerEnhancer
 ));
+*/
 
 
 ReactDOM.render(
